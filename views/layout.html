@@ -30,8 +30,8 @@
     </nav>
 
     <div class="row">
-      <div class="col-sm-8 map-body">
-        <h1>The Map</h1>
+      <div class="col-sm-8 map-body" id="map-canvas">
+        <!-- <h1>The Map</h1> -->
       </div>
       <div class="col-sm-4 side-bar">
         {% block body %}{% endblock %}
@@ -46,7 +46,7 @@
       <footer>
         <div class="row">
           <div class="col-lg-12">
-            <p>Copyright &copy; Company Sam and Anup 2015. Fuck Yea.</p>
+            <p>Copyright &copy; Company</p>
           </div>
         </div>
       </footer>
@@ -54,6 +54,9 @@
     </div><!-- /.container -->
   </container>
     <script src="/jquery/dist/jquery.js"></script>
+    <script src="/gmap.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVgNLiza3lm7nKhmd-NBz2TV5TZsw5XPQ&sensor=true"></script>
+
   </body>
 </html>
