@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<select name="select">
+  {% for hotel in hotels %}
+  <option value="{{hotel.name}}">{{hotel.name}}</option>
+  {% endfor %}
+</select>
+
+<p> TESTING </p>
+
+{% endblock %}

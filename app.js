@@ -10,7 +10,6 @@ var http = require('http');
 
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var app = express();
 
 // view engine setup
@@ -37,7 +36,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 app.use('/', routes);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

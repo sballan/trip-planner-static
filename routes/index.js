@@ -11,8 +11,20 @@ router.get('/', function(req, res, next) {
   var aPromise = Activity.find({}).exec();
   var promises = [hPromise, rPromise, aPromise]
 
-  Promise.all(promises).then(function() {
-    res.send(promises);
+  Promise.all(promises).then(function(data) {
+
+    // res.locals.hotels = data[0];
+    // res.locals.restaurants = data[1];
+    // res.locals.activities = data[2];
+
+    var elem = {};
+    elem.hotels = data[0]
+    elem.restaurants = data[1]
+    elem.activities = data[2]
+
+    //console.log(res.locals.hotels[0].name)
+    res.render('main', elem);
+    //res.send(data)
 });
 
 
