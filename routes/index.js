@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
     elem.activities = data[2]
 
     //console.log(res.locals.hotels[0].name)
-    res.render('main', elem);
+    res.render('sidebar', elem);
     //res.send(data)
 });
 

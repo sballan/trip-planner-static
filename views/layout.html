@@ -7,8 +7,9 @@
     <meta name="author" content="Sam and Anup">
 
     <title>Trip Planner</title>
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/stylesheets/style.css" rel="stylesheet">
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -16,7 +17,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header" >
-          <a class="navbar-brand" href="/">Shoestring Project</a>
+          <a class="navbar-brand" href="/">Trip Planner</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div>
@@ -26,9 +27,16 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
-    <p>This is a test Drop Down</p>
 
-    {% block body %}{% endblock %}
+    <div class="row">
+      <div class="col-sm-8 map-body">
+        <h1>The Map</h1>
+      </div>
+      <div class="col-sm-4 side-bar">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+
 
     <div class="container">
 
@@ -37,13 +45,13 @@
       <footer>
         <div class="row">
           <div class="col-lg-12">
-            <p>Copyright &copy; Company 2013</p>
+            <p>Copyright &copy; Company Sam and Anup 2015. Fuck Yea.</p>
           </div>
         </div>
       </footer>
 
     </div><!-- /.container -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>

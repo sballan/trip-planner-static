@@ -25,15 +25,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+//app.use(express.methodOverride());
+
+app.use(express.static(__dirname + '/bower_components'));
+app.use(express.static(__dirname + 'public'));
+
 app.use(
   sass({
-    src: __dirname + '/assets', //where the sass files are
-    dest: __dirname + '/public', //where css should go
+    src: __dirname + '/assets/', //where the sass files are
+    dest: __dirname + '/public/', //where css should go
     debug: true
   })
 );
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/bower_components', express.static(__dirname + '/bower_components'));
+
 
 app.use('/', routes);
 
