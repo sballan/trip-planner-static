@@ -25,24 +25,27 @@
 </div>
 
 <div class="days">
+  <ul class="nav nav-tabs">
+    {% for button in dangerButtons %}
+    <li role="presentation"><a href="#">Day {{button.name}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!--
   <h4>Day 2</h4>
   {% for button in dangerButtons %}
   <button type="button" class="btn btn-danger">{{button.name}}</button>
-  {% endfor %}
-</div>
+-->
+
 
 <div class = "planned-trip">
   <h4>The Trip:</h4>
+  <p>
+
+  </p>
 
 </div>
-
-
-
-
-
-
-
-
 
 
 
