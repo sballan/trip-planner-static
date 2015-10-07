@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
     elem.hotels = data[0]
     elem.restaurants = data[1]
     elem.activities = data[2]
-    elem.dangerButtons = [{name: '1', content: "Yo!"}, {name: '2', content: "Hey!"}, {name: '3', content: "Whats's Up!"}]
+    elem.dangerButtons = [{name: '1', content: "Yo!"}, {name: '2', content: "Hey!"}, {name: '3', content: "What's Up!"}]
 
 
     //console.log(res.locals.hotels[0].name)

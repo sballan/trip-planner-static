@@ -29,19 +29,14 @@ app.use(cookieParser());
 
 app.use(express.static(__dirname + '/bower_components'));
 
-
 app.use(
   sass({
-    src: __dirname + '/assets/', //where the sass files are
-    dest: __dirname + '/public/', //where css should go
+    src: __dirname + '/assets', //where the sass files are
+    dest: __dirname + '/public', //where css should go
     debug: true
   })
 );
 
-app.use(function (req, res, next) {
-	console.log("hellooooooo");
-	next();
-})
 app.use(express.static(__dirname + '/public'));
 
 app.use('/', routes);
