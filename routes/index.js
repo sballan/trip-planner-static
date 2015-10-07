@@ -21,6 +21,8 @@ router.get('/', function(req, res, next) {
     elem.hotels = data[0]
     elem.restaurants = data[1]
     elem.activities = data[2]
+    elem.dangerButtons = [{name: '1'}, {name: '2'}, {name: '3'}]
+
 
     //console.log(res.locals.hotels[0].name)
     res.render('sidebar', elem);

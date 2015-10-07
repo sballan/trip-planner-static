@@ -3,30 +3,42 @@
 
 <div class="top-bar">
   <h3>Hotels</h3>
-  <select class="form-control input-lg" name="select">
+  <select class="form-control input-md" name="select">
     {% for hotel in hotels %}
     <option value="{{hotel.name}}">{{hotel.name}}</option>
     {% endfor %}
   </select>
 
   <h3>Restaurant</h3>
-  <select class="form-control input-lg" name="select">
+  <select class="form-control input-md" name="select">
     {% for restaurant in restaurants %}
     <option value="{{restaurant.name}}">{{restaurant.name}}</option>
     {% endfor %}
   </select>
 
   <h3>Activities</h3>
-  <select class="form-control input-lg" name="select">
+  <select class="form-control input-md" name="select">
     {% for activity in activities %}
     <option value="{{activity.name}}">{{activity.name}}</option>
     {% endfor %}
   </select>
 </div>
 
-<div class="bottom-bar">
+<div class="days">
+  <h4>Day 2</h4>
+  {% for button in dangerButtons %}
+  <button type="button" class="btn btn-danger">{{button.name}}</button>
+  {% endfor %}
+</div>
+
+<div class = "planned-trip">
+  <h4>The Trip:</h4>
 
 </div>
+
+
+
+
 
 
 
