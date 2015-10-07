@@ -1,5 +1,3 @@
-//ANUP WAS HERE
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -30,7 +28,7 @@ app.use(cookieParser());
 //app.use(express.methodOverride());
 
 app.use(express.static(__dirname + '/bower_components'));
-app.use(express.static(__dirname + 'public'));
+
 
 app.use(
   sass({
@@ -40,6 +38,11 @@ app.use(
   })
 );
 
+app.use(function (req, res, next) {
+	console.log("hellooooooo");
+	next();
+})
+app.use(express.static(__dirname + '/public'));
 
 app.use('/', routes);
 

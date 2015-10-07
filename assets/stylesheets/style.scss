@@ -59,11 +59,18 @@ h4 {
   }
 }
 
+}
+
+
 .map-body {
   margin: 0px 0px 0px 0px;
-  background-color: #D6D6D6;
+  //background-color: #D6D6D6;
 }
 
 select {
   width: 70%;
+}
+
+#map-canvas {
+  height: 50vh;
 }
