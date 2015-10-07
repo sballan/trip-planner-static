@@ -25,28 +25,25 @@
 </div>
 
 <div class="days">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs" role="tablist" id="dayTabs">
     {% for button in dangerButtons %}
-    <li role="presentation"><a href="#">Day {{button.name}}</a></li>
+      <li class="nav-list-item"><a href="#day{{button.name}}" aria-controls="day{{button.name}}" data-toggle="tab">Day {{button.name}}</a></li>
     {% endfor %}
   </ul>
+
+  <div class="tab-content">
+    {% for button in dangerButtons %}
+      <div class="tab-pane" id="day{{button.name}}">{{button.content}}</div>
+    {% endfor %}
+  </div>
 </div>
-
-<!--
-  <h4>Day 2</h4>
-  {% for button in dangerButtons %}
-  <button type="button" class="btn btn-danger">{{button.name}}</button>
--->
-
-
-<div class = "planned-trip">
-  <h4>The Trip:</h4>
-  <p>
-
-  </p>
-
-</div>
-
-
+{# <script>
+{% for button in dangerButtons %}
+  $("#dayTabs a").click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  });
+{% endfor %}
+</script> #}
 
 {% endblock %}

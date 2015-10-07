@@ -47,7 +47,16 @@ h4 {
 }
 
 .days {
-
+  .nav-tabs {
+    font-weight: 300;
+    font-size: 150%;
+    font-family: 'Oswald', sans-serif;
+  }
+  .tab-content{
+    font-size: 150%;
+    font-weight: 100;
+    padding: 30px 10px 30px;
+  }
 }
 
 .map-body {
