@@ -1,57 +1,47 @@
 {% extends "layout.html" %}
 {% block body %}
-<div class="row">
   {#----- MAP -----#}
-  <div class="col-sm-8 map-body" id="map-canvas"></div>
-  {#----- SIDE BAR -----#}
-  <div class="col-sm-4 side-bar">
-    {#----- TOP BAR -----#}
-    <div class="panel panel-default top-panel">
-      <div class="panel-body">
-        <h3>Hotels</h3>
-        <select class="form-control input-md" name="select">
-          {% for hotel in hotels %}
-          <option value="{{hotel.name}}">{{hotel.name}}</option>
-          {% endfor %}
-        </select>
-        <h3>Restaurant</h3>
-        <select class="form-control input-md" name="select">
-          {% for restaurant in restaurants %}
-          <option value="{{restaurant.name}}">{{restaurant.name}}</option>
-          {% endfor %}
-        </select>
-        <h3>Activities</h3>
-        <select class="form-control input-md" name="select">
-          {% for activity in activities %}
-          <option value="{{activity.name}}">{{activity.name}}</option>
-          {% endfor %}
-        </select>
-      </div>
-    </div>
-    {#----- DAY BAR -----#}
-    <div class="panel panel-default bottom-panel">
-      <div class="panel-heading">
-        <div class="day-buttons">
-           <button class="btn btn-circle">1</button>
-           <button class="btn btn-circle">2</button>
-           <button class="btn btn-circle">3</button>
-           <button class="btn btn-circle">+</button>
-         </div>
-      </div>
-      <div class="panel-body">
-        <ul class="nav nav-tabs" role="tablist" id="dayTabs">
-          {% for button in dangerButtons %}
-            <li class="nav-list-item"><a href="#day{{button.name}}" aria-controls="day{{button.name}}" data-toggle="tab">Day {{button.name}}</a></li>
-          {% endfor %}
-        </ul>
-        {#----- TAB CONTENT -----#}
-        <div class="tab-content">
-          {% for button in dangerButtons %}
-            <div class="tab-pane" id="day{{button.name}}">{{button.content}}</div>
-          {% endfor %}
-        </div>
-      </div>
+<div id="map-canvas"></div>
 
+  {#----- TOP BAR -----#}
+  <div class="panel panel-default top-panel">
+    <div class="panel-body">
+      <h3>Hotels</h3>
+      <select class="form-control input-md" name="select">
+        {% for hotel in hotels %}
+        <option value="{{hotel.name}}">{{hotel.name}}</option>
+        {% endfor %}
+      </select>
+      <h3>Restaurant</h3>
+      <select class="form-control input-md" name="select">
+        {% for restaurant in restaurants %}
+        <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+        {% endfor %}
+      </select>
+      <h3>Activities</h3>
+      <select class="form-control input-md" name="select">
+        {% for activity in activities %}
+        <option value="{{activity.name}}">{{activity.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
   </div>
-</div>
+  {#----- DAY BAR -----#}
+  <div class="panel panel-default bottom-panel">
+    <div class="panel-heading">
+      <div class="day-buttons">
+         <button class="btn btn-circle">1</button>
+         <button class="btn btn-circle">2</button>
+         <button class="btn btn-circle">3</button>
+         <button class="btn btn-circle">+</button>
+       </div>
+    </div>
+    <div class="panel-body">
+      <ul class="nav nav-tabs" role="tablist" id="dayTabs">
+        {% for button in dangerButtons %}
+          <li class="nav-list-item"><a href="#day{{button.name}}" aria-controls="day{{button.name}}" data-toggle="tab">Day {{button.name}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
 {% endblock %}
