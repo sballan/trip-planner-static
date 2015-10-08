@@ -14,11 +14,10 @@
 
   <body>
   <div class="container">
-
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header" >
-          <a class="navbar-brand" href="/">Trip Planner</a>
+          <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-map-marker"></span>  Trip Planner</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div>
@@ -28,21 +27,9 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
-
-    <div class="row">
-      <div class="col-sm-8 map-body" id="map-canvas">
-        <!-- <h1>The Map</h1> -->
-      </div>
-      <div class="col-sm-4 side-bar">
-        {% block body %}{% endblock %}
-      </div>
-    </div>
-
-
+    {% block body %}{% endblock %}
     <div class="container">
-
       <hr>
-
       <footer>
         <div class="row">
           <div class="col-lg-12">
@@ -50,7 +37,6 @@
           </div>
         </div>
       </footer>
-
     </div><!-- /.container -->
   </container>
     <script src="/jquery/dist/jquery.js"></script>

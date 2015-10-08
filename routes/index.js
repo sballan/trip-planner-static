@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
 
 
     //console.log(res.locals.hotels[0].name)
-    res.render('sidebar', elem);
+    res.render('main', elem);
     //res.send(data)
 });
 
